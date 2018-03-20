@@ -15,7 +15,15 @@
             Hello There,<br /> If click this button you do, only a prequel quote will you find.
         </p>
         <button id="getQuoteBtn" class="waves-effect orange darken-3 btn-large">DEWIT !!</button>
-        <p id="quotePlaceholder"></p>
+        <div class="row quotecard">
+            <div class="col s12 m6 offset-m3">
+                <div class="card grey darken-4">
+                    <div class="card-content">
+                        <p id="quotePlaceholder">They are coming through</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript" src="js/main.js"></script>
         <iframe id="frmFile" src="res/quotes.txt" onload="LoadFile();" style="display: none;"></iframe>
         <!--Import jQuery before materialize.js-->

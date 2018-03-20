@@ -10,6 +10,7 @@ function LoadFile() {
             var random = quotes[Math.floor(Math.random()*quotes.length)];
         } while (random == prevRand || random == "");
         prevRand = random;
-        alert(random);
+        // alert(random);
+        document.getElementById("quotePlaceholder").innerHTML = random;
     };
 }

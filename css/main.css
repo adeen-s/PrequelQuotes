@@ -1,6 +1,11 @@
 body {
     padding: 12px;
 }
+
+.quotecard {
+    margin-top: 75px;
+}
+
 button {
 font-family: "Roboto", sans serif;
 font-weight: 600;
