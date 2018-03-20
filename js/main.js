@@ -1,5 +1,15 @@
-let quotes = ["Hello There", "General Kenobi, you are a bold one", "I have the high ground", "It's treason then"];
-document.getElementById('getQuoteBtn').onclick = function() {
-    var random = quotes[Math.floor(Math.random()*quotes.length)];
-    alert(random);
-};
+var prevRand = "";
+function LoadFile() {
+    var oFrame = document.getElementById("frmFile");
+    var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strRawContents.indexOf("\r") >= 0)
+        strRawContents = strRawContents.replace("\r", "");
+    var quotes = strRawContents.split("\n");
+    document.getElementById('getQuoteBtn').onclick = function() {
+        do {
+            var random = quotes[Math.floor(Math.random()*quotes.length)];
+        } while (random == prevRand || random == "");
+        prevRand = random;
+        alert(random);
+    };
+}
